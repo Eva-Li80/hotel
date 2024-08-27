@@ -5,10 +5,9 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import styles from "./home.module.css";
 import CardImageList from "../components/CardImageList";
-import ReadMoreButton from "../components/ReadMoreButton";
 
-const url = "/assets/testbild.jpg";
 const urlnatt = "/assets/hus.jpg";
+const url = "/assets/testbild.jpg";
 const urlhimmel = "/assets/himmel.jpeg";
 const urltest = "/assets/testbild.jpg";
 
@@ -30,7 +29,7 @@ export default function Home() {
             }}
           >
             <CardImageList />
-            <Card too="/about" url={urlhimmel}>
+            <Card too="/about" url={urlnatt}>
               <h1 style={{ fontSize: 25 }}>Hotel Venice Lido</h1>
               <h3 style={{ fontSize: 20 }}>
                 Hotel Cristallo, Cosy Atmosphere, Beach Near Venice
