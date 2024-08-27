@@ -1,0 +1,45 @@
+/* card.module.css */
+.cardContainer {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid white;
+  overflow: hidden;
+  max-height: 600px;
+  max-width: 1200px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(500px); /* Blur-effekt */
+  z-index: 1; /* Bakgrunds-z-index */
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2; /* Innehållets z-index */
+  color: rgb(29, 61, 92); /* Kontrastfärg */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* text-align: center;  */
+}
+
+.buttonContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Justera knappen till höger */
+  padding: 10px;
+  z-index: 2; /* Se till att knappen är ovanpå bakgrunden */
+}

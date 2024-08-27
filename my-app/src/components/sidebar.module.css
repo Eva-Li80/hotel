@@ -1,0 +1,15 @@
+/* sidebar.module.css */
+.sidebar {
+    width: 200px;
+  
+   
+    top: 200px; /* Positionera sidofältet högst upp */
+    left: 0; /* Positionera sidofältet till vänster */
+    
+
+    background: linear-gradient(135deg, white, #ede3d8);
+    /* background: linear-gradient(135deg,#B0A398, #cbae90, #ede3d8, #B0A398, rgb(65, 89, 113)); */
+    color: rgb(65, 89, 113); /* Textfärg */
+    overflow-y: auto; /* Visa scrollbar när innehållet överskrider höjden */
+  
+}

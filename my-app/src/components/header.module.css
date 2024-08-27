@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #cbae90, white, #ede3d8, #b0a398);
+  font-family: "Times New Roman", Times, serif;
+  height: 150px;
+  width: 100vw;
+
+}
+
+.h3 {
+  color: rgb(65, 89, 113);
+  font-size: 40px;
+}
+
+.p {
+  color: #89642d;
+  margin-left: 20px;
+  font-size: 25px;
+  margin-top: 5px;
+}

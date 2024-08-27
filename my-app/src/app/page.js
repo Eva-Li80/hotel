@@ -1,113 +1,111 @@
-import Image from "next/image";
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
+import Card from "../components/Card";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import styles from "./home.module.css";
+import CardImageList from "../components/CardImageList";
+import ReadMoreButton from "../components/ReadMoreButton";
+
+const url = "/assets/testbild.jpg";
+const urlnatt = "/assets/hus.jpg";
+const urlhimmel = "/assets/himmel.jpeg";
+const urltest = "/assets/testbild.jpg";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main>
+      <Header title="Hotel Cristallo" />
+      <Navbar />
+      <div style={{display: "flex", flexDirection: "row"}}>
+        <Sidebar />
+        <div className={styles.mainContent}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              margin: 20,
+              flexWrap: "wrap",
+            }}
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <CardImageList />
+            <Card too="/about" url={urlhimmel}>
+              <h1 style={{ fontSize: 25 }}>Hotel Venice Lido</h1>
+              <h3 style={{ fontSize: 20 }}>
+                Hotel Cristallo, Cosy Atmosphere, Beach Near Venice
+              </h3>
+              <p>
+                Hotel Cristallo, 2 star hotel in the center of Venice Lido,
+                welcomes you in a friendly, cosy and warm atmosphere. We are
+                located just 200 mt away from the beach and just 5 minutes walk
+                from the waterbus stop to the center of Venice. Our modern rooms
+                are equipped with all comforts, our staff is attentive and
+                thoughtful, our location is central so that you can fully enjoy
+                your holiday in Venice, surrounded by all the comforts and
+                services that only a residential and seaside resort can offer.
+              </p>
+              <h2 style={{ fontSize: 25 }}>Why Choosing Venice Lido</h2>
+              <p>
+                Venice Lido is a unique location for your stay: it is perfectly
+                suitable to enjoy a seaside holiday as well as spend some days
+                in Venice. The perfect balance of beauty, beaches and culture
+                make of Venice Lido and Hotel Cristallo the ideal location for
+                any kind of stay and vacation preference: a seaside holiday with
+                your family, a romantic stay in the Lagoon, a cultural weekend
+                to attend the Biennale. Our hotel is also a few minutes away
+                from the Venice Film Festival’s main location, in the heart of
+                Venetian movida, and near stores and boutiques for shopping
+                along the Gran Viale. Lido is also very lively in autumn and
+                winter, unlike other seaside resorts, and is among the top
+                places offering outstanding value for money in this season.
+              </p>
+            </Card>
+            <Card too="/about" url={urlnatt}>
+              <h1 style={{ fontSize: 25 }}>Discover our rooms</h1>
+              <p>
+                Hotel Cristallo offers recently renovated, bright, modern rooms.
+                We have larger rooms for families and also adjoining rooms upon
+                requests. Some rooms have a wood flooring, some have a balcony,
+                some have a view to our backyard garden.
+              </p>
+            </Card>
+
+            <Card too="/about" url={url}>
+              <h1 style={{ fontSize: 25 }}>Discover our reviews</h1>
+              <p>
+                The most important thing for us at Hotel Cristallo is the
+                satisfaction of our guests. Here you can read the reviews our
+                guests dedicated to us: we'd love to read yours too and help us
+                improve!
+              </p>
+            </Card>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <Card too="/about" url={url}>
+              <h1 style={{ fontSize: 25 }}>Special Offers</h1>
+              <h3>Direct Booking Offer, Discounts Hotel Venice Lido</h3>
+              <p>
+                10% discount always valid on Hotel Cristallo official website.
+              </p>
+            </Card>
+            <Card too="/about" url={url}>
+              <h1 style={{ fontSize: 25 }}>Special Offers</h1>
+              <h3>Direct Booking Offer, Discounts Hotel Venice Lido</h3>
+              <p>
+                10% discount always valid on Hotel Cristallo official website.
+              </p>
+            </Card>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <Footer />
     </main>
   );
 }

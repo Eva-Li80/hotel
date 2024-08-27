@@ -1,0 +1,20 @@
+/* ReadMoreButton.module.css */
+.readMore {
+    border: 2px solid #cbae90;
+    border-radius: 8px;
+    background-color: #B0A398;
+    color: rgb(252, 241, 241);
+    width: 100px;
+    padding: 1px 1px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .readMore:hover {
+    background-color: #cbae90;
+    color: white;
+  }
+  
